@@ -1,0 +1,58 @@
+:root {
+  --color-a:#6D5959;
+  --color-b: #c9a100;
+  --color-c: #c9c7a9;
+  --color-d: #ABEBD2;
+  --color-e: #292929;
+}
+.App {
+  text-align: center;
+  background-color: var(--color-e)
+}
+*{
+  color: var(--color-c);
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.proj-container{
+  background-color: var(--color-a);
+  border-radius:15px;
+  padding: 1rem;
+  max-width: 33.3%;
+  min-width: 33.3%;
+  border: solid var(--color-c) 0.2em ;
+}
+
+.quote-title{
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 0.4em;
+}
+
+.quote-text{
+  padding: 0.4em;
+}
+
+.quote-footer{
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  padding: 0.4em;
+}
+
+.quote-next-button{
+  align-self: flex-end;
+  padding: 0.6em;
+  background-color: var(--color-e);
+  border: 0;
+  border-radius: 10px;
+  color: var(--color-c);
+}
