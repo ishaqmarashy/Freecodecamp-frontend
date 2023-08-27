@@ -93,3 +93,30 @@
   background-color: var(--color-a);
   border: 0cap;
 }
+.code-block {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.code-block code {
+  display: block;
+  padding: 0;
+}
+
+.code-block .javascript {
+  color: #f39c12;
+}
+
+.code-block .italic {
+  font-style: italic;
+}
+
+.code-block .bold {
+  font-weight: bold;
+}
+
+#preview>*,#preview>*>*{
+	max-width: 40vw;
+}

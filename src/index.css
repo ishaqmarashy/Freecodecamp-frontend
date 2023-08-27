@@ -4,28 +4,7 @@
 */
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+
 :root {
 	--color-a: #cbc291;
 	--color-b: #242b00;
@@ -33,12 +12,24 @@ table {
 	--color-d: #1f1c1f;
 	--color-e: #4d4619;
 }
+
 *{
 	margin: 0;
 	padding: 0;
 	border: 0;
 	color: var(--color-b);
 }
+table {
+	border-collapse: collapse;
+  }
+  tr {
+	border-bottom: 1px solid #000000;
+  }
+  th, td {
+	text-align: left;
+	padding: 4px;
+	border: 2px solid #224b4b;
+  }
 
 .App{
 	background-color: var(--color-d);
