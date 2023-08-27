@@ -1,20 +1,5 @@
-:root {
-  --color-a:#6D5959;
-  --color-b: #c9a100;
-  --color-c: #c9c7a9;
-  --color-d: #ABEBD2;
-  --color-e: #292929;
-}
-.App {
-  text-align: center;
-  background-color: var(--color-e)
-}
-*{
-  color: var(--color-c);
-}
-
-.App-header {
-  min-height: 100vh;
+.quote-header {
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,22 +7,28 @@
   font-size: calc(10px + 2vmin);
 }
 
-.proj-container{
+#quote-box, .markdown-editor, .markdown-editor textarea{
   background-color: var(--color-a);
-  border-radius:15px;
-  padding: 1rem;
-  max-width: 33.3%;
-  min-width: 33.3%;
-  border: solid var(--color-c) 0.2em ;
 }
 
-.quote-title{
+#quote-box, .markdown-editor{
+  border: solid var(--color-c) 0.2em ;
+  border-radius:15px; 
+  padding: 1rem;
+}
+
+#quote-box{
+  max-width: 33.3%;
+  min-width: 33.3%;
+}
+
+#author{
   font-size: 1.3em;
   font-weight: bold;
   padding: 0.4em;
 }
 
-.quote-text{
+#text{
   padding: 0.4em;
 }
 
@@ -46,13 +37,59 @@
   flex-direction: column;
   font-weight: bold;
   padding: 0.4em;
+  gap:1em;
 }
 
-.quote-next-button{
+#new-quote{
   align-self: flex-end;
   padding: 0.6em;
   background-color: var(--color-e);
   border: 0;
   border-radius: 10px;
-  color: var(--color-c);
+  color: var(--color-a);
+}
+
+.nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.nav>*,nav>*>*{
+  color: var(--color-a);
+}
+/* ----------------------------- */
+.markdown-header {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.markdown-container {
+  padding-top: 5vh;
+}
+
+
+.markdown-editor,.markdown-editor textarea,.markdown-editor-toolbar{
+  min-width: 40vw;
+  max-width: 40vw;
+  margin: auto;
+}
+
+.markdown-editor textarea,.markdown-editor-toolbar{
+  border: 0;
+  background-color: var(--color-a);
+  display: flex;
+  resize: vertical;
+}
+
+.markdown-editor-toolbar{
+  justify-content:space-between;
+  flex-direction: row;
+  border-bottom: dotted var(--color-c) 0.2em ;
+}
+
+.markdown-editor-toolbar button{
+  background-color: var(--color-a);
+  border: 0cap;
 }
