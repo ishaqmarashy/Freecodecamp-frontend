@@ -4,6 +4,8 @@ import Nav from './components/Nav'
 import React,{useState} from 'react';
 import Markdown from './components/Markdown';
 import Drums from './components/Drums';
+import Calculator from './components/Calculator';
+import TFPFClock from './components/TFPFClock';
 
 const solutions=['Random Quote Machine',
                 'Markdown Previewer',
@@ -24,9 +26,9 @@ function App() {
         <Nav handleNextSolution={handleNextSolution} solution={solutions[currPage]}></Nav>
         {currPage===1?<RandomQuoteMachine/>:<></>}
         {currPage===2?<Drums/>:<></>}
-        {currPage===0?<Drums/>:<></>}
+        {currPage===0?<TFPFClock/>:<></>}
         {currPage===3?<Markdown/>:<></>}
-        {currPage===4?<Drums/>:<></>}
+        {currPage===4?<Calculator/>:<></>}
     </div>
   );
 }

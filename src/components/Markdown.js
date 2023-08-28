@@ -44,7 +44,7 @@ Row 2, Col 1 | Row 2, Col 2 | Row 2, Col 3
 1. Use only 1s for numbering.
 1. Last but not least, let's include an image:
 
-![Example Image](https://www.shutterstock.com/image-photo/new-potato-isolated-on-white-background-1910558641)`;
+![Example Image](${'/android-chrome-512x512.png'})`;
 
 function Markdown(){
     const marked = new Marked(
