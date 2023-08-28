@@ -2,9 +2,15 @@ import './App.css';
 import RandomQuoteMachine from './components/RandomQuoteMachine';
 import Nav from './components/Nav'
 import React,{useState} from 'react';
-import solutions from './components/solutions'
 import Markdown from './components/Markdown';
+import Drums from './components/Drums';
 
+const solutions=['Random Quote Machine',
+                'Markdown Previewer',
+                'Drum Machine',
+                'Javascript Calculator',
+                '25+5 clock']
+    
 function App() {
   const pages=5;
   const [currPage,setCurrPage]=useState(0);
@@ -17,10 +23,10 @@ function App() {
     <div className="App">
         <Nav handleNextSolution={handleNextSolution} solution={solutions[currPage]}></Nav>
         {currPage===1?<RandomQuoteMachine/>:<></>}
-        {currPage===0?<Markdown/>:<></>}
-        {currPage===2?<Markdown/>:<></>}
+        {currPage===2?<Drums/>:<></>}
+        {currPage===0?<Drums/>:<></>}
         {currPage===3?<Markdown/>:<></>}
-        {currPage===4?<Markdown/>:<></>}
+        {currPage===4?<Drums/>:<></>}
     </div>
   );
 }

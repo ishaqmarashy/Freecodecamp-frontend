@@ -3,6 +3,7 @@ import {Marked} from "marked";
 import {markedHighlight} from "marked-highlight";
 import hljs from 'highlight.js';
 import 'highlight.js/styles/default.css';
+
 const initialMarkdown=`# My Awesome Markdown Previewer!
 
 ## An Exciting Sub-Heading
@@ -43,8 +44,7 @@ Row 2, Col 1 | Row 2, Col 2 | Row 2, Col 3
 1. Use only 1s for numbering.
 1. Last but not least, let's include an image:
 
-![Example Image](https://via.placeholder.com/150)
-`;
+![Example Image](https://via.placeholder.com/150)`;
 
 function Markdown(){
     const marked = new Marked(
@@ -56,12 +56,7 @@ function Markdown(){
         }
       })
     );
-    const [markdown, setMarkdown] = useState(initialMarkdown);
-    const markedMarkdown = marked.parse(markdown);
-    const [expanded, setExpanded] = useState(false);
-    
-    
-      
+
     const handleChange=function(event){
         setMarkdown(event.target.value);
         };
@@ -74,24 +69,28 @@ function Markdown(){
         else
         textarea.style.height = '2em'; 
         };
-            
+
+      const [markdown, setMarkdown] = useState(initialMarkdown);
+      const markedMarkdown = marked.parse(markdown);
+      const [expanded, setExpanded] = useState(false);
+         
 return(
     <header className="markdown-header">
         <div className='markdown-container'> 
-                    <div className="markdown-editor">
-                <div className="markdown-editor-toolbar">
-                    <h4 className="markdown-editor-title">Markdown Editor</h4>
-                    <button onClick={handleClick}>{expanded? 'Shrink':'Expand'}</button>
-                </div>
-                <textarea id="editor" onChange={handleChange} value={markdown}></textarea>
+            <div className="markdown-editor">
+              <div className="markdown-editor-toolbar">
+                <h4 className="markdown-editor-title">Markdown Editor</h4>
+                <button onClick={handleClick}>{expanded? 'Shrink':'Expand'}</button>
+              </div>
+              <textarea id="editor" onChange={handleChange} value={markdown}></textarea>
             </div>
             {expanded?<></>: <div className="markdown-editor">
-                <div className="markdown-editor-toolbar">
-                    <h4 className="markdown-editor-title">Markdown Output</h4>
-                </div>
-                <div id="preview" className="editor" dangerouslySetInnerHTML={{ __html: markedMarkdown }}></div>
+            <div className="markdown-editor-toolbar">
+                <h4 className="markdown-editor-title">Markdown Output</h4>
+            </div>
+            <div id="preview" className="editor" dangerouslySetInnerHTML={{ __html: markedMarkdown }}></div>
             </div>
             }
         </div>
-    </header>)}
+    </header>);};
 export default Markdown;

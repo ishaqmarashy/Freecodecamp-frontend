@@ -1,4 +1,4 @@
-.quote-header {
+.quote-header , .drum-machine-header{
   min-height: 80vh;
   display: flex;
   flex-direction: column;
@@ -7,17 +7,17 @@
   font-size: calc(10px + 2vmin);
 }
 
-#quote-box, .markdown-editor, .markdown-editor textarea{
+#quote-box, #drum-machine , .markdown-editor, .markdown-editor textarea{
   background-color: var(--color-a);
 }
 
-#quote-box, .markdown-editor{
+#quote-box, #drum-machine, .markdown-editor{
   border: solid var(--color-c) 0.2em ;
   border-radius:15px; 
   padding: 1rem;
 }
 
-#quote-box{
+#quote-box, #drum-machine {
   max-width: 33.3%;
   min-width: 33.3%;
 }
@@ -69,7 +69,6 @@
   padding-top: 5vh;
 }
 
-
 .markdown-editor,.markdown-editor textarea,.markdown-editor-toolbar{
   min-width: 40vw;
   max-width: 40vw;
@@ -119,4 +118,29 @@
 
 #preview>*,#preview>*>*{
 	max-width: 40vw;
+}
+
+/* ---------------- */
+
+#display{
+  margin: auto;
+  text-align: center;
+}
+#pad{
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  justify-content: center;
+  align-items: center;
+}
+.drum-pad{
+  padding: 50px;
+  background-color: var(--color-c);
+  color: var(--color-a);
+  padding: 2vw;
+  margin: 2vw;
+  text-align: center;
+  border-radius: 10px;
 }
