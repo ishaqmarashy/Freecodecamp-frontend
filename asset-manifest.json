@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.ffbbc73b.css",
-    "main.js": "/static/js/main.89ab4e03.js",
-    "index.html": "/index.html",
-    "main.ffbbc73b.css.map": "/static/css/main.ffbbc73b.css.map",
-    "main.89ab4e03.js.map": "/static/js/main.89ab4e03.js.map"
+    "main.css": "/fcc-sol/static/css/main.ffbbc73b.css",
+    "main.js": "/fcc-sol/static/js/main.8021fb06.js",
+    "index.html": "/fcc-sol/index.html",
+    "main.ffbbc73b.css.map": "/fcc-sol/static/css/main.ffbbc73b.css.map",
+    "main.8021fb06.js.map": "/fcc-sol/static/js/main.8021fb06.js.map"
   },
   "entrypoints": [
     "static/css/main.ffbbc73b.css",
-    "static/js/main.89ab4e03.js"
+    "static/js/main.8021fb06.js"
   ]
 }
