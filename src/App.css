@@ -170,7 +170,12 @@
   color: var(--color-a);
   text-align: center;
 }
-#timer-label{
+#timer-label,.{
 padding: 1em;
 border-bottom:solid var(--color-a) 0.2em;
+}
+.calc-display{
+  padding: .4em;
+  background-color: var(--color-b);
+  color: var(--color-a);
 }

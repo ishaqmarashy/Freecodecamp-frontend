@@ -56,7 +56,9 @@ function Markdown(){
         }
       })
     );
-
+    marked.setOptions({
+      breaks: true
+    })
     const handleChange=function(event){
         setMarkdown(event.target.value);
         };
