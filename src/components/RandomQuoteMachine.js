@@ -46,7 +46,7 @@ function RandomQuoteMachine(){
     return(
     <header className="quote-header">
         <div id='quote-box'>
-            <h3 id='author'>{selectedQuote.title}<a> {selectedQuote.author}</a></h3>
+            <h3 id='author'>{selectedQuote.title}{selectedQuote.author}</h3>
             <div id='text'>
                 "{selectedQuote.quote}"
             </div>
